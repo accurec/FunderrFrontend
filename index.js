@@ -6,6 +6,9 @@ const balanceButton = document.getElementById("balanceButton")
 const getOwnerButton = document.getElementById("getOwnerButton")
 const getCampaignIdCounterButton = document.getElementById("getCampaignIdCounterButton")
 const getActiveFundedCampaignWindowButton = document.getElementById("getActiveFundedCampaignWindowButton")
+const getMaxTitleLengthButton = document.getElementById("getMaxTitleLengthButton")
+const getMaxDescriptionLengthButton = document.getElementById("getMaxDescriptionLengthButton")
+const getCreateCampaignFeeButton = document.getElementById("getCreateCampaignFeeButton")
 const contributeToCampaignButton = document.getElementById("contributeToCampaignButton")
 const withdrawCampaignContributionsButton = document.getElementById("withdrawCampaignContributionsButton")
 const refundCampaignContributionsButton = document.getElementById("refundCampaignContributionsButton")
@@ -20,6 +23,9 @@ balanceButton.onclick = getBalance
 getOwnerButton.onclick = getOwner
 getCampaignIdCounterButton.onclick = getCampaignIdCounter
 getActiveFundedCampaignWindowButton.onclick = getActiveFundedCampaignWindow
+getMaxTitleLengthButton.onclick = getMaxTitleLength
+getMaxDescriptionLengthButton.onclick = getMaxDescriptionLength
+getCreateCampaignFeeButton.onclick = getCreateCampaignFee
 createCampaignButton.onclick = createCampaign
 contributeToCampaignButton.onclick = contributeToCampaign
 withdrawCampaignContributionsButton.onclick = withdrawCampaignContributions
@@ -107,6 +113,57 @@ async function getActiveFundedCampaignWindow() {
         try {
             const activeFundedCampaignWindow = await contract.getActiveFundedCampaignWindow()
             alert(`${parseInt(activeFundedCampaignWindow) / 86400} days`)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
+
+async function getMaxTitleLength() {
+    console.log("Getting maxTitleLength...")
+
+    if (typeof window.ethereum !== "undefined") {
+        const provider = new ethers.BrowserProvider(window.ethereum)
+        const signer = await provider.getSigner()
+        const contract = new ethers.Contract(contractAddress, abi, signer)
+
+        try {
+            const maxTitleLength = await contract.getMaxTitleLength()
+            alert(`${parseInt(maxTitleLength)} bytes`)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
+
+async function getMaxDescriptionLength() {
+    console.log("Getting maxDescriptionLength...")
+
+    if (typeof window.ethereum !== "undefined") {
+        const provider = new ethers.BrowserProvider(window.ethereum)
+        const signer = await provider.getSigner()
+        const contract = new ethers.Contract(contractAddress, abi, signer)
+
+        try {
+            const maxDescriptionLength = await contract.getMaxDescriptionLength()
+            alert(`${parseInt(maxDescriptionLength)} bytes`)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
+
+async function getCreateCampaignFee() {
+    console.log("Getting createCampaignFee...")
+
+    if (typeof window.ethereum !== "undefined") {
+        const provider = new ethers.BrowserProvider(window.ethereum)
+        const signer = await provider.getSigner()
+        const contract = new ethers.Contract(contractAddress, abi, signer)
+
+        try {
+            const createCampaignFee = await contract.getCreateCampaignFee()
+            alert(`${ethers.formatEther(createCampaignFee)} ETH`)
         } catch (error) {
             console.log(error)
         }
