@@ -55,7 +55,7 @@ async function getBalance() {
 
         try {
             const balance = await provider.getBalance(contractAddress)
-            console.log(ethers.formatEther(balance))
+            alert(`${ethers.formatEther(balance)} ETH`)
         } catch (error) {
             console.log(error)
         }
@@ -72,7 +72,7 @@ async function getOwner() {
 
         try {
             const owner = await contract.getOwner()
-            console.log(owner)
+            alert(owner)
         } catch (error) {
             console.log(error)
         }
@@ -89,7 +89,7 @@ async function getCampaignIdCounter() {
 
         try {
             const campaignIdCounter = await contract.getCampaignIdCounter()
-            console.log(campaignIdCounter)
+            alert(campaignIdCounter)
         } catch (error) {
             console.log(error)
         }
@@ -106,7 +106,7 @@ async function getActiveFundedCampaignWindow() {
 
         try {
             const activeFundedCampaignWindow = await contract.getActiveFundedCampaignWindow()
-            console.log(activeFundedCampaignWindow)
+            alert(`${parseInt(activeFundedCampaignWindow) / 86400} days`)
         } catch (error) {
             console.log(error)
         }
