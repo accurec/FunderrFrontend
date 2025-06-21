@@ -36,6 +36,7 @@ function GetCampaignIdCounter() {
             <button
                 onClick={getCampaignIdCounter}
                 disabled={loading}
+                style={{ marginRight: '10px' }}
             >
                 {loading ? 'Loading...' : 'Get campaign ID counter'}
             </button>

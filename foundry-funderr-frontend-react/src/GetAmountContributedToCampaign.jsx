@@ -22,8 +22,8 @@ function GetAmountContributedToCampaign() {
 
     return (
         <div className="component">
-            <input value={campaignId} onChange={e => setCampaignId(e.target.value)} placeholder="Campaign ID" />
-            <button onClick={getAmountContributedToCampaign}>Get amount I contributed to a campaign</button>
+            <input style={{ marginRight: '10px' }} value={campaignId} onChange={e => setCampaignId(e.target.value)} placeholder="Campaign ID" />
+            <button style={{ marginRight: '10px' }} onClick={getAmountContributedToCampaign}>Get amount I contributed to a campaign</button>
             <label>Contributed: {campaignContributedAmount} ETH</label>
         </div>
     );

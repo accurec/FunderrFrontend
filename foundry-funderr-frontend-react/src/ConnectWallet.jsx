@@ -20,7 +20,7 @@ function ConnectWallet({ setAccount }) {
     };
 
     return (
-        <button onClick={connect}>
+        <button style={{ marginRight: '10px' }} onClick={connect}>
             {connected ? 'Connected' : 'Connect Wallet'}
         </button>
     );

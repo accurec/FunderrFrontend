@@ -36,6 +36,7 @@ function GetMaxCampaignTitleLength() {
             <button
                 onClick={getMaxCampaignTitleLength}
                 disabled={loading}
+                style={{ marginRight: '10px' }}
             >
                 {loading ? 'Loading...' : 'Get max campaign title length'}
             </button>

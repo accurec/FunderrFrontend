@@ -36,6 +36,7 @@ function GetContractOwner() {
             <button
                 onClick={getContractOwner}
                 disabled={loading}
+                style={{ marginRight: '10px' }}
             >
                 {loading ? 'Loading...' : 'Get contract owner'}
             </button>

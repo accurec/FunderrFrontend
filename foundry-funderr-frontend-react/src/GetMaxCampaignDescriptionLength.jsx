@@ -36,6 +36,7 @@ function GetMaxCampaignDescriptionLength() {
             <button
                 onClick={getMaxCampaignDescriptionLength}
                 disabled={loading}
+                style={{ marginRight: '10px' }}
             >
                 {loading ? 'Loading...' : 'Get max campaign description length'}
             </button>

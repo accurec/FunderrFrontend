@@ -34,6 +34,7 @@ function GetContractBalance() {
             <button
                 onClick={getContractBalance}
                 disabled={loading}
+                style={{ marginRight: '10px' }}
             >
                 {loading ? 'Loading...' : 'Get contract balance'}
             </button>

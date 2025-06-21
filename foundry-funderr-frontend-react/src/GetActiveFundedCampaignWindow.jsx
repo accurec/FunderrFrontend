@@ -36,6 +36,7 @@ function GetActiveFundedCampaignWindow() {
             <button
                 onClick={getActiveFundedCampaignWindow}
                 disabled={loading}
+                style={{ marginRight: '10px' }}
             >
                 {loading ? 'Loading...' : 'Get active funded campaign window'}
             </button>

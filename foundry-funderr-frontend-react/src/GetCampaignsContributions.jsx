@@ -21,7 +21,7 @@ function GetCampaignsContributions() {
 
     return (
         <div className="component">
-            <button onClick={getCampaignsContributions}>Get my campaigns contributions</button>
+            <button style={{ marginRight: '10px' }} onClick={getCampaignsContributions}>Get my campaigns contributions</button>
             <label>Campaign IDs: {campaignsContributions.join(', ')}</label>
         </div>
     );

@@ -37,6 +37,7 @@ function GetCreateCampaignFee() {
             <button
                 onClick={getCreateCampaignFee}
                 disabled={loading}
+                style={{ marginRight: '10px' }}
             >
                 {loading ? 'Loading...' : 'Get campaign creation fee'}
             </button>

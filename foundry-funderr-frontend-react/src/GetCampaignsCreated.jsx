@@ -21,7 +21,7 @@ function GetCampaignsCreated() {
 
     return (
         <div className="component">
-            <button onClick={getCampaignsCreated}>Get campaigns I created</button>
+            <button style={{ marginRight: '10px' }} onClick={getCampaignsCreated}>Get campaigns I created</button>
             <label>Campaign IDs: {campaignsContributions.join(', ')}</label>
         </div>
     );

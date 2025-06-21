@@ -37,6 +37,7 @@ function GetFeesCollected() {
             <button
                 onClick={getFeesCollected}
                 disabled={loading}
+                style={{ marginRight: '10px' }}
             >
                 {loading ? 'Loading...' : 'Get fees collected'}
             </button>

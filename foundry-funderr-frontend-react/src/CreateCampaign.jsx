@@ -25,10 +25,10 @@ function CreateCampaign() {
 
     return (
         <div className="component">
-            <input value={goal} onChange={e => setGoal(e.target.value)} placeholder="Goal in ETH" />
-            <input value={duration} onChange={e => setDuration(e.target.value)} placeholder="Duration in seconds" />
-            <input value={title} onChange={e => setTitle(e.target.value)} placeholder="Title" />
-            <input value={description} onChange={e => setDescription(e.target.value)} placeholder="Description" />
+            <input style={{ marginRight: '10px' }} value={goal} onChange={e => setGoal(e.target.value)} placeholder="Goal in ETH" />
+            <input style={{ marginRight: '10px' }} value={duration} onChange={e => setDuration(e.target.value)} placeholder="Duration in seconds" />
+            <input style={{ marginRight: '10px' }} value={title} onChange={e => setTitle(e.target.value)} placeholder="Title" />
+            <input style={{ marginRight: '10px' }} value={description} onChange={e => setDescription(e.target.value)} placeholder="Description" />
             <button onClick={createCampaign}>Create Campaign</button>
         </div>
     );
