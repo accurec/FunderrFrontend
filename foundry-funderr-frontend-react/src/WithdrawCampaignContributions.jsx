@@ -17,7 +17,7 @@ function WithdrawCampaignContributions() {
     };
 
     return (
-        <div>
+        <div className="component">
             <input value={campaignId} onChange={e => setCampaignId(e.target.value)} placeholder="Campaign ID" />
             <button onClick={withdrawCampaignContributions}>Withdraw campaign contributions</button>
         </div>

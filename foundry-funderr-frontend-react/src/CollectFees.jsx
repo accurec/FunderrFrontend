@@ -14,7 +14,7 @@ function CollectFees() {
     };
 
     return (
-        <div>
+        <div className="component">
             <button onClick={collectFees}>Collect fees</button>
         </div>
     );

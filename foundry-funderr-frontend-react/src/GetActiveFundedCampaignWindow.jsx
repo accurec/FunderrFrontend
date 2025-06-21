@@ -32,7 +32,7 @@ function GetActiveFundedCampaignWindow() {
     };
 
     return (
-        <div>
+        <div className="component">
             <button
                 onClick={getActiveFundedCampaignWindow}
                 disabled={loading}

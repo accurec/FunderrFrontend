@@ -30,7 +30,7 @@ function GetContractBalance() {
     };
 
     return (
-        <div>
+        <div className="component">
             <button
                 onClick={getContractBalance}
                 disabled={loading}

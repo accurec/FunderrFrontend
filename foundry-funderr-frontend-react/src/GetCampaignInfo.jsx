@@ -34,10 +34,10 @@ function GetCampaignInfo() {
     };
 
     return (
-        <div>
-            <input value={campaignInfoId} onChange={e => setCampaignInfoId(e.target.value)} placeholder="Campaign ID" />
+        <div className="component">
+            <input style={{ marginRight: '10px' }} value={campaignInfoId} onChange={e => setCampaignInfoId(e.target.value)} placeholder="Campaign ID" />
             <button onClick={getCampaignInfo}>Get campaign info</button>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'flex-start' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'flex-start', marginTop: '10px' }}>
                 <label>ID: {id}</label>
                 <label>Owner: {owner}</label>
                 <label>Goal: {ethers.formatEther(goal)} ETH</label>

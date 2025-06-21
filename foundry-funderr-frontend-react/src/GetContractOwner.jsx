@@ -32,7 +32,7 @@ function GetContractOwner() {
     };
 
     return (
-        <div>
+        <div className="component">
             <button
                 onClick={getContractOwner}
                 disabled={loading}

@@ -33,7 +33,7 @@ function GetCreateCampaignFee() {
     };
 
     return (
-        <div>
+        <div className="component">
             <button
                 onClick={getCreateCampaignFee}
                 disabled={loading}

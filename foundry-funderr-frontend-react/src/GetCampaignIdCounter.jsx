@@ -32,7 +32,7 @@ function GetCampaignIdCounter() {
     };
 
     return (
-        <div>
+        <div className="component">
             <button
                 onClick={getCampaignIdCounter}
                 disabled={loading}

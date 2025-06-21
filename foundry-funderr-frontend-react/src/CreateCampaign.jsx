@@ -24,7 +24,7 @@ function CreateCampaign() {
     };
 
     return (
-        <div>
+        <div className="component">
             <input value={goal} onChange={e => setGoal(e.target.value)} placeholder="Goal in ETH" />
             <input value={duration} onChange={e => setDuration(e.target.value)} placeholder="Duration in seconds" />
             <input value={title} onChange={e => setTitle(e.target.value)} placeholder="Title" />

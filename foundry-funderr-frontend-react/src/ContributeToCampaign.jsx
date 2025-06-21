@@ -20,7 +20,7 @@ function ContributeToCampaign() {
     };
 
     return (
-        <div>
+        <div className="component">
             <input value={campaignId} onChange={e => setCampaignId(e.target.value)} placeholder="Campaign ID" />
             <input value={amountInEth} onChange={e => setAmountInEth(e.target.value)} placeholder="Amount in ETH" />
             <button onClick={contributeToCampaign}>Contribute to campaign</button>

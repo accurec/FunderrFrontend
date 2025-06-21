@@ -32,7 +32,7 @@ function GetMaxCampaignTitleLength() {
     };
 
     return (
-        <div>
+        <div className="component">
             <button
                 onClick={getMaxCampaignTitleLength}
                 disabled={loading}

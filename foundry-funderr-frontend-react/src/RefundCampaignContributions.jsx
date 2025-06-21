@@ -17,7 +17,7 @@ function RefundCampaignContributions() {
     };
 
     return (
-        <div>
+        <div className="component">
             <input value={campaignId} onChange={e => setCampaignId(e.target.value)} placeholder="Campaign ID" />
             <button onClick={refundCampaignContributions}>Refund campaign contributions</button>
         </div>

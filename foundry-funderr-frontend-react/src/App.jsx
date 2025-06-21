@@ -17,6 +17,7 @@ import GetActiveFundedCampaignWindow from './GetActiveFundedCampaignWindow'
 import GetCampaignIdCounter from './GetCampaignIdCounter'
 import GetContractOwner from './GetContractOwner'
 import GetContractBalance from './GetContractBalance'
+import GetFeesCollected from './GetFeesCollected'
 
 function App() {
   const [account, setAccount] = useState(null)
@@ -24,9 +25,9 @@ function App() {
   return (
     <>
       <h1>Funderr dApp</h1>
-      <div>
+      <div className="component">
         <ConnectWallet setAccount={setAccount} />
-        {account && <p>Connected account: {account}</p>}
+        {account && <label>Connected account: {account}</label>}
       </div>
       <CreateCampaign />
       <ContributeToCampaign />
@@ -44,6 +45,7 @@ function App() {
       <GetCampaignIdCounter />
       <GetContractOwner />
       <GetContractBalance />
+      <GetFeesCollected />
     </>
   )
 }

@@ -20,7 +20,7 @@ function GetCampaignsCreated() {
     };
 
     return (
-        <div>
+        <div className="component">
             <button onClick={getCampaignsCreated}>Get campaigns I created</button>
             <label>Campaign IDs: {campaignsContributions.join(', ')}</label>
         </div>

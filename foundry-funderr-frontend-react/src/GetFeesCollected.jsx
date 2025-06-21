@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { ethers } from 'ethers';
 import { abi, contractAddress } from './constants';
 
-function GetMaxCampaignDescriptionLength() {
-    const [campaignMaxDescriptionLength, setMaxDescriptionLength] = useState(null);
+function GetFeesCollected() {
+    const [feesCollected, setFeesCollected] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    const getMaxCampaignDescriptionLength = async () => {
+    const getFeesCollected = async () => {
         setLoading(true);
         setError(null);
 
@@ -17,11 +17,12 @@ function GetMaxCampaignDescriptionLength() {
                 const signer = await provider.getSigner();
                 const contract = new ethers.Contract(contractAddress, abi, signer);
 
-                const campaignMaxDescriptionLength = await contract.getMaxDescriptionLength();
+                const feesCollected = await contract.getFeesCollected();
+                const feesCollectedInEth = ethers.formatEther(feesCollected);
 
-                setMaxDescriptionLength(campaignMaxDescriptionLength);
+                setFeesCollected(feesCollectedInEth);
             } catch (error) {
-                setError("Failed to get max campaign description length.");
+                setError("Failed to get campaign creation fee.");
             } finally {
                 setLoading(false);
             }
@@ -34,14 +35,14 @@ function GetMaxCampaignDescriptionLength() {
     return (
         <div className="component">
             <button
-                onClick={getMaxCampaignDescriptionLength}
+                onClick={getFeesCollected}
                 disabled={loading}
             >
-                {loading ? 'Loading...' : 'Get max campaign description length'}
+                {loading ? 'Loading...' : 'Get fees collected'}
             </button>
 
-            {campaignMaxDescriptionLength && (
-                <label>Max campaign description length: {campaignMaxDescriptionLength} bytes</label>
+            {feesCollected && (
+                <label>Fees collected: {feesCollected} ETH</label>
             )}
 
             {error && (
@@ -51,4 +52,4 @@ function GetMaxCampaignDescriptionLength() {
     );
 }
 
-export default GetMaxCampaignDescriptionLength; 
+export default GetFeesCollected; 
