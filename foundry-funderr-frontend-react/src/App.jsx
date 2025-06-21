@@ -14,6 +14,9 @@ import GetCreateCampaignFee from './GetCreateCampaignFee'
 import GetMaxCampaignDescriptionLength from './GetMaxCampaignDescriptionLength'
 import GetMaxCampaignTitleLength from './GetMaxCampaignTitleLength'
 import GetActiveFundedCampaignWindow from './GetActiveFundedCampaignWindow'
+import GetCampaignIdCounter from './GetCampaignIdCounter'
+import GetContractOwner from './GetContractOwner'
+import GetContractBalance from './GetContractBalance'
 
 function App() {
   const [account, setAccount] = useState(null)
@@ -38,6 +41,9 @@ function App() {
       <GetMaxCampaignDescriptionLength />
       <GetMaxCampaignTitleLength />
       <GetActiveFundedCampaignWindow />
+      <GetCampaignIdCounter />
+      <GetContractOwner />
+      <GetContractBalance />
     </>
   )
 }
