@@ -7,6 +7,9 @@ import ContributeToCampaign from './ContributeToCampaign'
 import WithdrawCampaignContributions from './WithdrawCampaignContributions'
 import RefundCampaignContributions from './RefundCampaignContributions'
 import CollectFees from './CollectFees'
+import GetCampaignsContributions from './GetCampaignsContributions'
+import GetCampaignsCreated from './GetCampaignsCreated'
+import GetAmountContributedToCampaign from './GetAmountContributedToCampaign'
 
 function App() {
   const [account, setAccount] = useState(null)
@@ -23,6 +26,9 @@ function App() {
       <WithdrawCampaignContributions />
       <RefundCampaignContributions />
       <CollectFees />
+      <GetCampaignsContributions />
+      <GetCampaignsCreated />
+      <GetAmountContributedToCampaign />
       <GetCampaignInfo />
     </>
   )
