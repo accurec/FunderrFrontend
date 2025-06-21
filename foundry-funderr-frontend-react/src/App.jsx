@@ -10,6 +10,10 @@ import CollectFees from './CollectFees'
 import GetCampaignsContributions from './GetCampaignsContributions'
 import GetCampaignsCreated from './GetCampaignsCreated'
 import GetAmountContributedToCampaign from './GetAmountContributedToCampaign'
+import GetCreateCampaignFee from './GetCreateCampaignFee'
+import GetMaxCampaignDescriptionLength from './GetMaxCampaignDescriptionLength'
+import GetMaxCampaignTitleLength from './GetMaxCampaignTitleLength'
+import GetActiveFundedCampaignWindow from './GetActiveFundedCampaignWindow'
 
 function App() {
   const [account, setAccount] = useState(null)
@@ -30,6 +34,10 @@ function App() {
       <GetCampaignsCreated />
       <GetAmountContributedToCampaign />
       <GetCampaignInfo />
+      <GetCreateCampaignFee />
+      <GetMaxCampaignDescriptionLength />
+      <GetMaxCampaignTitleLength />
+      <GetActiveFundedCampaignWindow />
     </>
   )
 }
