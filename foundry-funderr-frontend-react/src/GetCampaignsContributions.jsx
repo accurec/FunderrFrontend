@@ -15,7 +15,6 @@ function GetCampaignsContributions() {
 
             const campaigns = await contract.getContributedCampaignsByContributor(contributorId);
             setCampaignsContributions(campaigns)
-            alert('Retrieved campaign contributions!');
         }
     };
 

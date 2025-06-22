@@ -16,7 +16,6 @@ function GetAmountContributedToCampaign() {
 
             const contributed = await contract.getCampaignContributionByContributor(campaignId, contributorId);
             setCampaignContributedAmount(ethers.formatEther(contributed))
-            alert('Retrieved campaign contributions!');
         }
     };
 

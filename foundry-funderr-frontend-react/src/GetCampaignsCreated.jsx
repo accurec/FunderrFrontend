@@ -15,7 +15,6 @@ function GetCampaignsCreated() {
 
             const campaigns = await contract.getCampaignsByOwner(ownerId);
             setCampaignsContributions(campaigns)
-            alert('Retrieved campaigns that I created!');
         }
     };
 
