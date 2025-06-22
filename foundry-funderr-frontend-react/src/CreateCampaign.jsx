@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ethers } from 'ethers';
 import { abi, contractAddress } from './constants';
+import { listenForTransactionMine } from './util'
 
 function CreateCampaign() {
     const [goal, setGoal] = useState('');
@@ -18,7 +19,8 @@ function CreateCampaign() {
             const durationInt = parseInt(duration);
             const fee = await contract.getCreateCampaignFee();
 
-            await contract.createCampaign(goalInWei, durationInt, title, description, { value: fee });
+            const txResponse = await contract.createCampaign(goalInWei, durationInt, title, description, { value: fee });
+            await listenForTransactionMine(txResponse, provider)
             alert('Campaign created!');
         }
     };

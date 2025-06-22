@@ -15,7 +15,7 @@ function CollectFees() {
 
     return (
         <div className="component">
-            <button onClick={collectFees}>Collect fees</button>
+            <button onClick={collectFees}>Withdraw collected fees</button>
         </div>
     );
 }
