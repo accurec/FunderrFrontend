@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import ConnectWallet from './ConnectWallet'
+import MetamaskConnector from './MetamaskConnector'
 import CreateCampaign from './CreateCampaign'
 import GetCampaignInfo from './GetCampaignInfo'
 import ContributeToCampaign from './ContributeToCampaign'
@@ -25,10 +25,7 @@ function App() {
   return (
     <>
       <h1>Funderr dApp</h1>
-      <div className="component">
-        <ConnectWallet setAccount={setAccount} />
-        {account && <label>Connected account: {account}</label>}
-      </div>
+      <MetamaskConnector />
       <CreateCampaign />
       <ContributeToCampaign />
       <WithdrawCampaignContributions />
