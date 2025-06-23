@@ -20,8 +20,6 @@ import GetContractBalance from './GetContractBalance'
 import GetFeesCollected from './GetFeesCollected'
 
 function App() {
-  const [account, setAccount] = useState(null)
-
   return (
     <>
       <h1>Funderr dApp</h1>
