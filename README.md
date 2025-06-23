@@ -8,3 +8,4 @@ NOTE: the frontend is not yet ready for production use and its main purpose is t
 
 1) Upgrade the website to be more user friendly and usable.
 2) Add "loading/error" states to all components.
+3) Add image upload functionality so that we can then pass image URLs to create campaign smart contract call.
